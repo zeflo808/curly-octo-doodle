@@ -76,4 +76,6 @@ jobs:
           name: build
           path: ${{ env.BUILD_DIR }}
       - name: Deploy website
-        run: yarn deploy
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          yarn deploy
