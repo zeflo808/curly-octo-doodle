@@ -1,0 +1,297 @@
+:root {
+  --primaryColor: rgb(0, 157, 157);
+  --secondaryColor: rgba(225, 227, 84);
+  --bgNavigation: rgb(47, 44, 88);
+  --tertiaryColor: rgb(60, 56, 112);
+  --errorColor: rgb(231, 29, 50);
+
+  --neutralWhite: #fff;
+  --neutralPear: #f3f4f6;
+  --neutralSilver: #cfd4da;
+  --neutralCharcoal: #343a40;
+
+  --headerHeight: 56px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+main {
+  height: calc(100% - var(--headerHeight));
+  padding: 32px 40px;
+}
+
+label {
+  font-size: 13px;
+  display: block;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+input {
+  margin: 0;
+  width: 100%;
+  height: 32px;
+  border: solid 1px var(--neutralSilver);
+  border-radius: 4px;
+  outline-color: var(--primaryColor);
+  outline-offset: 2px;
+}
+
+button[type='submit'] {
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  height: 32px;
+  color: var(--neutralWhite);
+  background-color: var(--tertiaryColor);
+  border: none;
+  border-radius: 4px;
+  outline-color: var(--primaryColor);
+  outline-offset: 2px;
+}
+
+button[type='submit']:disabled {
+  opacity: 0.8;
+}
+
+#root {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    23deg,
+    var(--primaryColor) 30%,
+    var(--secondaryColor) 100%
+  );
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  color: var(--neutralCharcoal);
+}
+
+/* ====================== Components ====================== */
+/* Box */
+.Box-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: var(--neutralPear);
+  border: solid 1px var(--neutralSilver);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.Box-header {
+  flex: 0 1 auto;
+  padding: 16px;
+  border-bottom: solid 1px var(--neutralSilver);
+}
+
+.Box-header h2 {
+  font-size: 20px;
+}
+
+.Box-children {
+  flex: 1;
+  padding: 16px;
+}
+
+.Box-loading-wrapper {
+  height: 100%;
+  width: 0px;
+  animation: fullView 0.5s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes fullView {
+  100% {
+    width: 100%;
+  }
+}
+
+.Box-loading-el {
+  height: 100%;
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    hsl(220deg 14% 96%) 4%,
+    hsl(220deg 14% 88%) 25%,
+    hsl(220deg 14% 96%) 36%
+  );
+  background-size: 1000px 100%;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Field */
+.Field-wrapper {
+  margin-bottom: 16px;
+}
+
+.Field-wrapper input {
+  width: 100%;
+}
+
+.Field-error {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--errorColor);
+}
+
+/* Navigation */
+.Navigation-header {
+  background: var(--bgNavigation);
+  padding: 0 40px;
+  height: var(--headerHeight);
+  border-bottom: solid 1px var(--tertiaryColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--neutralWhite);
+}
+
+.Navigation-user-icon {
+  display: inline-block;
+  fill: none;
+  line-height: 1;
+  vertical-align: middle;
+  flex: 0 0 auto;
+}
+
+.Navigation-signout {
+  color: var(--secondaryColor);
+  font-weight: bold;
+  text-decoration: none;
+  margin-inline-start: 16px;
+}
+
+.Navigation-signout:hover,
+.Navigation-signout:focus {
+  outline: none;
+  text-decoration: underline;
+  color: var(--neutralPear);
+}
+
+.Navigation-end {
+  display: flex;
+  align-items: center;
+}
+
+.Navigation-end > * {
+  margin-inline-start: 8px;
+}
+
+/* Logo */
+.Logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.Logo-title {
+  margin: 0;
+  padding: 0;
+  margin-inline-start: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--neutralCharcoal);
+}
+
+/* Tooltip */
+.Tooltip-content .Box-children {
+  padding: 8px;
+  background: var(--neutralCharcoal);
+  font-size: 12px;
+  color: var(--neutralWhite);
+}
+
+.Tooltip-content p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.Tooltip-highlight {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.Tooltip-highlight > b:nth-of-type(2) {
+  color: var(--secondaryColor);
+}
+
+/* ====================== Pages ====================== */
+/* Welcome */
+.Welcome-wrapper {
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+}
+
+.Welcome-wrapper .Logo-wrapper {
+  text-align: center;
+  margin-bottom: 32px;
+  display: block;
+}
+
+.Welcome-wrapper .Box-header {
+  text-align: center;
+}
+
+.Welcome-box {
+  width: 340px;
+}
+
+.Home-wrapper {
+  height: 100%;
+  display: flex;
+}
+
+/* Home */
+.Home-sidepanel {
+  flex: 1;
+  max-width: 340px;
+  margin-inline-end: 24px;
+}
+
+.Home-sidepanel > div {
+  margin-bottom: 24px;
+}
+
+/* Balance */
+.Balance-wrapper {
+  height: 139px;
+}
+
+.Balance-amount {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primaryColor);
+}
+
+/* Graph */
+.Graph-wrapper {
+  flex: 1;
+}
+
+/* ====================== Utilities ====================== */
+.srOnly:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
