@@ -1,4 +1,4 @@
-# CurlyOctoDoodle: a JoinCoin App by Florent
+# CurlyOctoDoodle: a JobCoin App by Florent
 
 This [Create React App](https://github.com/facebook/create-react-app) TypeScript project is a simple 2-page app driven by Gemini's JobCoin [API](https://jobcoin.gemini.com/candied-hardwood).
 
