@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/curly-octo-doodle/static/css/main.d670e758.css",
-    "main.js": "/curly-octo-doodle/static/js/main.597a9147.js",
+    "main.js": "/curly-octo-doodle/static/js/main.8a5d3b6d.js",
     "static/js/787.0b8d192c.chunk.js": "/curly-octo-doodle/static/js/787.0b8d192c.chunk.js",
     "index.html": "/curly-octo-doodle/index.html",
     "main.d670e758.css.map": "/curly-octo-doodle/static/css/main.d670e758.css.map",
-    "main.597a9147.js.map": "/curly-octo-doodle/static/js/main.597a9147.js.map",
+    "main.8a5d3b6d.js.map": "/curly-octo-doodle/static/js/main.8a5d3b6d.js.map",
     "787.0b8d192c.chunk.js.map": "/curly-octo-doodle/static/js/787.0b8d192c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d670e758.css",
-    "static/js/main.597a9147.js"
+    "static/js/main.8a5d3b6d.js"
   ]
 }
