@@ -1,10 +1,40 @@
-# Getting Started with Create React App
+# CurlyOctoDoodle: a JoinCoin App by Florent
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This [Create React App](https://github.com/facebook/create-react-app) TypeScript project is a simple 2-page app driven by Gemini's JobCoin [API](https://jobcoin.gemini.com/candied-hardwood).
 
-## Available Scripts
+## :rocket:&nbsp;&nbsp;Features
 
-In the project directory, you can run:
+- Colorful design with a fresh logo :rainbow: :heart_eyes:
+- Includes a `Welcome` and `Home` page
+- User authentication via a `fakeAuth` service
+- User authentication persistence via `localStorage`
+- Automatically redirects to `Home` or `Welcome` page based on prior authentication state
+- Fetches live data and display current balance and transactions
+- Data visualization of past transactions with line chart
+- Transaction details display with tooltips
+- Supports sending JobCoins to other addresses
+- Frontend form validations for required fields and incorrect values
+- Loading state with simple shimer effect
+- Effort handling using HTML alert patterns
+- A11Y: AA compliance for contrast ratios, semantic markup
+- CI: Github action workflow with testing and deployment to Github Pages
+
+## Disclaimer:&nbsp;&nbsp;:warning:
+
+This app lacks crucial security features, especially with regards to authentication, authorization, and user inputs sanitation. This is a **NOT** a production-ready app and it was never intented to be. I hope we're clear here. :wink:
+
+## Libraries:&nbsp;&nbsp;:books:
+
+This Typescript project was completed with the help of these fantastic open-source projects:
+
+- `create-react-app`
+- `react-router-dom`
+- `clsx`
+- `react-hook-form`
+- `recharts`
+- `date-fns`
+
+## Development:&nbsp;&nbsp;:nerd_face:
 
 ### `yarn start`
 
@@ -28,16 +58,6 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 

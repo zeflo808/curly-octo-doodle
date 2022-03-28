@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+/// <reference path="./App.d.ts" />
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import './normalize.css';
 import './App.css';
+import { AuthProvider } from './components/AuthProvider';
+import { Home } from './pages/Home';
+import { Navigation } from './components/Navigation';
+import { NotFound } from './components/NotFound';
+import { PrivateRoute } from './components/PrivateRoute';
+import { Welcome } from './pages/Welcome';
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // HashRouter is most compatible with Github Pages
+    <HashRouter>
+      <AuthProvider>
+        <Navigation />
+        <main>
+          <Routes>
+            <Route index element={<Welcome />} />
+            <Route path="welcome" element={<Welcome />} />
+            <Route
+              path="home"
+              element={
+                <PrivateRoute>
+                  <Home />
+                </PrivateRoute>
+              }
+            />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+      </AuthProvider>
+    </HashRouter>
   );
-}
-
-export default App;
+};
