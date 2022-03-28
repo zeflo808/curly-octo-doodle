@@ -2,6 +2,9 @@
 
 This [Create React App](https://github.com/facebook/create-react-app) TypeScript project is a simple 2-page app driven by Gemini's JobCoin [API](https://jobcoin.gemini.com/candied-hardwood).
 
+![Screen Shot 2022-03-27 at 15 34 50](https://user-images.githubusercontent.com/102430916/160311977-9b723523-cefa-4dcf-8d3b-bfad0dfca793.jpg)
+
+
 ## :rocket:&nbsp;&nbsp;Features
 
 - Colorful design with a fresh logo :rainbow: :heart_eyes:
