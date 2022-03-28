@@ -6,24 +6,24 @@ This [Create React App](https://github.com/facebook/create-react-app) TypeScript
 
 - Colorful design with a fresh logo :rainbow: :heart_eyes:
 - Includes a `Welcome` and `Home` page
-- User authentication via a `fakeAuth` service
+- User authentication with a very basic, unsecured `fakeAuth` service
 - User authentication persistence via `localStorage`
-- Automatically redirects to `Home` or `Welcome` page based on prior authentication state
-- Fetches live data and display current balance and transactions
+- Automatically redirects to `Home` or `Welcome` page based on prior auth state
+- Fetches live data then displays current balance and transactions
 - Data visualization of past transactions with line chart
-- Transaction details display with tooltips
+- Transaction details in graph tooltips
 - Supports sending JobCoins to other addresses
 - Frontend form validations for required fields and incorrect values
 - Loading state with simple shimer effect
-- Effort handling using HTML alert patterns
-- A11Y: AA compliance for contrast ratios, semantic markup
+- Error handling using HTML alert patterns
+- A11Y: AA compliance for contrast ratios + semantic markup
 - CI: Github action workflow with testing and deployment to Github Pages
 
-## Disclaimer:&nbsp;&nbsp;:warning:
+## :warning:&nbsp;&nbsp;Disclaimer:
 
 This app lacks crucial security features, especially with regards to authentication, authorization, and user inputs sanitation. This is a **NOT** a production-ready app and it was never intented to be. I hope we're clear here. :wink:
 
-## Libraries:&nbsp;&nbsp;:books:
+## :books:&nbsp;&nbsp;Libraries:
 
 This Typescript project was completed with the help of these fantastic open-source projects:
 
@@ -34,7 +34,7 @@ This Typescript project was completed with the help of these fantastic open-sour
 - `recharts`
 - `date-fns`
 
-## Development:&nbsp;&nbsp;:nerd_face:
+## :nerd_face:&nbsp;&nbsp;Development:
 
 ### `yarn start`
 
